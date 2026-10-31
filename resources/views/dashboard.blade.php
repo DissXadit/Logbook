@@ -9,32 +9,7 @@
     </div>
 
 
-    <di class="row">
-        <div class="col-12 col-sm-6 col-md-3 mb-3">
-            <div class="card bg-primary custom-card">
-                <div class="card-body">
-                <h3 class="card-title text-white">Nama</h3>
-                <strong>
-                    <span class="d-block text-white text-uppercase" style="font-size: 16px">
-                        {{ Auth::user()->name }}</span>
-                </strong>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-12 col-sm-6 col-md-3 mb-3">
-            <div class="card bg-success custom-card">
-                <div class="card-body">
-                <h3 class="card-title text-white">Level</h3>
-                <strong>
-                    <span class="d-block text-white text-uppercase" style="font-size: 16px">
-                        {{ Auth::user()->level }}</span>
-                </strong>
-                </div>
-            </div>
-        </div>
-
+    <div class="row">
         <div class="col-12 col-sm-6 col-md-3 mb-3">
             <div class="card bg-info custom-card">
                 <div class="card-body">

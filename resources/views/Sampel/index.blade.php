@@ -67,7 +67,6 @@
                         <div class="col-4">
                             <a href="{{ url('form-edit', $item->id) }}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                         </div>
-                        @if (Auth::user()->level == 'admin')
                         <div class="col-4">
                             <form action="{{ url('hapus-sampel') }}" method="post">
                                 @csrf
@@ -75,7 +74,6 @@
                                 <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                             </form>
                         </div>
-                        @endif
                     </div>
                 </td>
             </tr>

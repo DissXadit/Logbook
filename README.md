@@ -29,6 +29,21 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
+## Deploying on Vercel
+
+This Laravel application uses Vercel's Container runtime through FrankenPHP. Keep the Vercel project root set to this repository's root and use the Container framework preset; do not configure a static output directory such as `dist`.
+
+Before deploying, add these environment variables in the Vercel project:
+
+- `APP_KEY`: generate once with `php artisan key:generate --show` and store the result as a Vercel environment variable.
+- `APP_URL`: the deployed application URL.
+- `DB_CONNECTION`: `mysql` or `pgsql`.
+- `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD`: credentials for an external database.
+
+The local SQLite database is excluded from the container and Vercel storage is not persistent. Do not use SQLite or local files for production data. After configuring the external database, run `php artisan migrate --force` as a deployment/release step. The app uses database-backed sessions, so the `sessions` table must also exist.
+
+See Vercel's [Laravel with Docker guide](https://vercel.com/kb/guide/laravel-php-with-docker) for the Container runtime and deployment details.
+
 ## Laravel Sponsors
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
