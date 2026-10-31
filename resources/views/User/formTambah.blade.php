@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('layout.css')
+@include('Layout.css')
 
 <body class="bg-gradient-primary">
 
@@ -50,7 +50,7 @@
         </div>
 
     </div>
-@include('layout.js')
+@include('Layout.js')
 
 </body>
 

@@ -8,7 +8,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('layout.sidebar')
+        @include('Layout.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -18,7 +18,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                @include('layout.navbar')
+                @include('Layout.navbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -31,7 +31,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('layout.footer')
+            @include('Layout.footer')
             <!-- End of Footer -->
 
         </div>

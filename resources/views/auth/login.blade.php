@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('layout.css')
+@include('Layout.css')
 
 <body>
 
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-@include('layout.js')
+@include('Layout.js')
 </body>
 
 </html>

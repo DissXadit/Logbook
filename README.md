@@ -40,7 +40,7 @@ Before deploying, add these environment variables in the Vercel project:
 - `DB_CONNECTION`: `mysql` or `pgsql`.
 - `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD`: credentials for an external database.
 
-The local SQLite database is excluded from the container and Vercel storage is not persistent. Do not use SQLite or local files for production data. After configuring the external database, run `php artisan migrate --force` as a deployment/release step. The app uses database-backed sessions, so the `sessions` table must also exist.
+The local SQLite database is excluded from the container and Vercel storage is not persistent. Do not use SQLite or local files for production data. The container uses cookie-backed sessions, but login and application data still require a production database. After configuring the external database, run `php artisan migrate --force` as a deployment/release step.
 
 See Vercel's [Laravel with Docker guide](https://vercel.com/kb/guide/laravel-php-with-docker) for the Container runtime and deployment details.
 
