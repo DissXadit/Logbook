@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\SampelController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\AuthController;
 
-Route::get('/', [AuthController::class, 'index']);
+Route::redirect('/', '/login');
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'verify'])->name('auth.verify');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

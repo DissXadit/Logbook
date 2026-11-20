@@ -7,6 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Menjalankan secara lokal
+
+Persyaratan: PHP 8.2+, Composer, dan ekstensi PDO SQLite aktif.
+
+```powershell
+composer install
+Copy-Item .env.example .env
+New-Item -ItemType File -Path database\database.sqlite -Force
+php artisan key:generate
+php artisan migrate
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+Buka [http://127.0.0.1:8000](http://127.0.0.1:8000); alamat root akan mengarahkan ke halaman login. Jika ingin menguji proses login, siapkan akun pada database lokal terlebih dahulu.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

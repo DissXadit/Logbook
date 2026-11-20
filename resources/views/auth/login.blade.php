@@ -18,7 +18,7 @@
                         Selamat Datang
                     </span>
 
-                    <div class="wrap-input100"  >
+                    <div class="wrap-input100">
                         <input class="input100" type="email" name="email" placeholder="Email" id="email" value autofocus required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -26,7 +26,7 @@
                         </span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
                         <input class="input100" type="password" name="password" placeholder="Password" id="exampleInputPassword" required>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
@@ -39,19 +39,19 @@
                             Login
                         </button>
                     </div>
-<div>
-                    <p class="text-grey-200 text-center p-t-136">
-                        New on our platform?
-                        <span class="text-black font-bold-1000"> Contact Administrator</span>
-                    </p>
-                </div>
+                    <div>
+                        <p class="text-grey-200 text-center p-t-136">
+                            New on our platform?
+                            <span class="text-black font-bold-1000"> Contact Administrator</span>
+                        </p>
+                    </div>
                 </form>
 
             </div>
         </div>
     </div>
 
-@include('Layout.js')
+    @include('Layout.js')
 </body>
 
 </html>
