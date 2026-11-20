@@ -10,3 +10,11 @@ it('returns a successful response', function () {
         ->assertViewIs('auth.login')
         ->assertSee('Selamat Datang');
 });
+
+it('shows the dashboard summary', function () {
+    $this->get(route('dashboard'))
+        ->assertOk()
+        ->assertViewIs('dashboard')
+        ->assertViewHasAll(['jumlahUser', 'jumlahProduk', 'jumlahSampel', 'sampelTerbaru'])
+        ->assertSee('Sampel Terbaru');
+});
